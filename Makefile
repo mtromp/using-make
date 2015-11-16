@@ -16,8 +16,6 @@ sum_args:= $(subst $(space),$(plus),$(RUN_ARGS))
 
 .PHONY: add
 add:
-#	echo "$(four) + $(two) = $(sum) = $(shell echo "$(four)+$(two)" | bc)"
-#	bar:= $(subst $(space),$(comma),$(@)) 
 	echo "Sum $(sum_args) = $(shell echo "$(sum_args)" | bc)"
 	
 %:
